@@ -37,8 +37,16 @@ storiesOf('React Full Header', module)
         <FullHeader
             title="TDD"
             subtitle="JS TDD COURSE xD"
-            bgColor="#329988"
-            textColor="#FF9900"
-            font="Cursive"
+            bgImg="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg"
+        />;
+    })
+    .add('with title, subtitle, video', () => {
+        <FullHeader
+            title="TDD"
+            subtitle="JS TDD COURSE xD"
+            textColor="#EBE9EB"
+            textColor="#3299BB"
+            video="http://thenewcode.com/assets/videos/polina.mp4"
         />;
     });
+
