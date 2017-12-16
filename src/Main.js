@@ -5,6 +5,7 @@ import {
     titleStyle,
     subtitleStyle,
     containerStyle,
+    videoStyle,
 } from './Styles';
 
 const defaultProps = {
@@ -21,9 +22,18 @@ const propTypes = {
     textColor: PropTypes.string,
     font: PropTypes.string,
     bgImg: PropTypes.string,
+    video: PropTypes.string,
 };
 
-const FullHeader = ({ title, subtitle, bgColor, textColor, font, bgImg }) => {
+const FullHeader = ({
+    title,
+    subtitle,
+    bgColor,
+    textColor,
+    font,
+    bgImg,
+    video,
+}) => {
     const headerStylesCombined = {
         ...headerStyle,
         backgroundImage: `url(${bgImg})`,
@@ -37,6 +47,9 @@ const FullHeader = ({ title, subtitle, bgColor, textColor, font, bgImg }) => {
                 {title && <h1 style={titleStyle}>{title}</h1>}
                 {subtitle && <h2 style={subtitleStyle}>{subtitle}</h2>}
             </div>
+            {video && (
+                <video style={videoStyle} autoPlay muted loop src={video} />
+            )}
         </header>
     );
     return component;

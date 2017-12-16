@@ -13,7 +13,7 @@ describe('<FullHeader />', () => {
     });
 
     context('title', () => {
-        it('should have h1 tag when title are passed', () => {
+        it('should have h1 tag when title is passed', () => {
             const wrapper = shallow(<FullHeader title="Title" />);
             expect(wrapper.find('h1')).to.have.length(1);
         });
@@ -28,11 +28,11 @@ describe('<FullHeader />', () => {
     });
 
     context('subtitle', () => {
-        it('should have h2 when subtitle are passed', () => {
+        it('should have h2 when subtitle is passed', () => {
             const wrapper = shallow(<FullHeader subtitle="Subtitle" />);
             expect(wrapper.find('h2')).to.have.length(1);
         });
-        it('should not have h2 when subtitle are not passed', () => {
+        it('should not have h2 when subtitle is not passed', () => {
             const wrapper = shallow(<FullHeader />);
             expect(wrapper.find('h2')).to.have.length(0);
         });
@@ -103,6 +103,21 @@ describe('<FullHeader />', () => {
             expect(wrapper)
                 .to.have.style('background-image')
                 .equal('url(bg.jpg)');
+        });
+    });
+
+    context('video', () => {
+        it('should have video tag when video is passed', () => {
+            const wrapper = shallow(<FullHeader video="my_video.mp4" />);
+            expect(wrapper.find('video')).to.have.length(1);
+        });
+        it('should not have video tag when video is not passed', () => {
+            const wrapper = shallow(<FullHeader />);
+            expect(wrapper.find('video')).to.have.length(0);
+        });
+        it('should have vide with the video passed', () => {
+            const wrapper = shallow(<FullHeader video="my_video.mp4" />);
+            expect(wrapper.find('video').props().src).to.be.equal('my_video.mp4');
         });
     });
 });
