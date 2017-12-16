@@ -67,9 +67,7 @@ describe('<FullHeader />', () => {
         });
 
         it('should have color equal #ff0000 when none is passed', () => {
-            const wrapper = shallow(
-                <FullHeader textColor="#ff0000" />
-            );
+            const wrapper = shallow(<FullHeader textColor="#ff0000" />);
             expect(wrapper)
                 .to.have.style('color')
                 .equal('#ff0000');
@@ -85,12 +83,26 @@ describe('<FullHeader />', () => {
         });
 
         it('should have color equal open-sans when none is passed', () => {
-            const wrapper = shallow(
-                <FullHeader font="open-sans" />
-            );
+            const wrapper = shallow(<FullHeader font="open-sans" />);
             expect(wrapper)
                 .to.have.style('font-family')
                 .equal('open-sans');
+        });
+    });
+
+    context('bgImg', () => {
+        it('should have background-image equal empty when none is passed', () => {
+            const wrapper = shallow(<FullHeader />);
+            expect(wrapper)
+                .to.have.style('background-image')
+                .equal('url()');
+        });
+
+        it('should have background-image equal bg.jpg when passed', () => {
+            const wrapper = shallow(<FullHeader bgImg="bg.jpg" />);
+            expect(wrapper)
+                .to.have.style('background-image')
+                .equal('url(bg.jpg)');
         });
     });
 });
