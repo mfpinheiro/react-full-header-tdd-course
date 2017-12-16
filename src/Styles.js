@@ -33,4 +33,4 @@ export const videoStyle = {
     width: 'auto',
     height: 'auto',
     transform: 'translate(-50%, -50%)',
-}
+};
