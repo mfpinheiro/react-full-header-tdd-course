@@ -13,7 +13,7 @@ storiesOf('React Full Header', module)
     .add('with title, subtitle, bgColor and textColor', () => (
         <FullHeader
             title="TDD"
-            subtitle="JS TDD COURSE xD"
+            subtitle="Curso de JS com TDD na prática."
             bgColor="#329988"
             textColor="#FF9900"
         />
@@ -21,19 +21,19 @@ storiesOf('React Full Header', module)
     .add('with title, subtitle, bgColor, textColor and font', () => (
         <FullHeader
             title="TDD"
-            subtitle="JS TDD COURSE xD"
+            subtitle="Curso de JS com TDD na prática."
             bgColor="#329988"
             textColor="#FF9900"
             font="Cursive"
         />
     ))
     .add('with title, subtitle, bgImage', () => (
-        <FullHeader title="TDD" subtitle="JS TDD COURSE xD" bgImg="" />
+        <FullHeader title="TDD" subtitle="Curso de JS com TDD na prática." bgImg="" />
     ))
     .add('with title, subtitle, video', () => (
         <FullHeader
             title="TDD"
-            subtitle="JS TDD COURSE xD"
+            subtitle="Curso de JS com TDD na prática."
             textColor="#EBE9EB"
             textColor="#3299BB"
             video="http://thenewcode.com/assets/videos/polina.mp4"
